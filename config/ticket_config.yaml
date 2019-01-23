@@ -5,40 +5,43 @@ set:
   # - 2018-01-06
   # - 2018-01-07
   station_dates:
-    - "2019-01-18"
+    - "2019-02-12"
 
   # 是否根据时间范围 和 乘车类型 购票
   # 否则将需要手动填写车次
   is_by_time: False
 
   # 列车类型: 高铁 G 动车 D 其它火车 O
-  train_types: [G,D,O]
+  train_types: [G,D]
 
   # 可接受最早出发时间 格式ex：
   # departure_time: "8:00"
-  departure_time: "00:00"
+  departure_time: "13:00"
 
   # 可接受最晚抵达时间 格式ex：
   # arrival_time: "16:00"
-  arrival_time: "24:00"
+  arrival_time: "14:00"
 
   # 可接受最长旅途时间 格式ex：
   # take_time: "24:00"
-  take_time: "24:00"
+  take_time: "6:00"
 
   # 填入需要购买的车次(list)，格式ex：
   # - "G1353"
   # - "G1329"
   station_trains:
-    - "G6153"
-    - "G6184"
-    - "G6173"
+    - "D3058"
+    - "D2214"
+    - "D958"
+    - "G1726"
+    - "G600"
+    - "G1774"
 
   # 出发城市，比如深圳北，就填深圳就搜得到
-  from_station: "邵阳"
+  from_station: "武汉"
 
   # 到达城市 比如深圳北，就填深圳就搜得到
-  to_station: "深圳北"
+  to_station: "上海"
 
   # 座位(list) 多个座位ex:
   # - "商务座"
@@ -51,7 +54,7 @@ set:
   # - "无座"
   # - "动卧"
   set_type:
-  - "二等座"
+  - "一等座"
 
   # 当余票小于乘车人，如果选择优先提交，则删减联系人和余票数一致在提交
   is_more_ticket: False
@@ -60,11 +63,11 @@ set:
   # - "张三"
   # - "李四"
   ticke_peoples:
-    - ""
+    - "李达"
 
   # 12306登录账号(list)
   12306account:
-    - user: "qqxin1011"
+    - user: "18202729129"
     - pwd: ""
 
 # 加入小黑屋时间默认为5分钟，此功能为了防止僵尸票导致一直下单不成功错过正常的票，
@@ -78,7 +81,7 @@ auto_code_type: 2
 
 # 打码平台账号
 auto_code_account:
-  user: "931128603"
+  user: "dazilee"
   pwd: ""
 
 #  邮箱配置，如果抢票成功，将通过邮件配置通知给您
@@ -96,16 +99,16 @@ auto_code_account:
 #  host: "smtp.qq.com"
 email_conf:
   is_email: True
-  email: "931128603@qq.com "
-  notice_email_list: "931128603@qq.com"
-  username: "931128603"
+  email: "dazich@163.com "
+  notice_email_list: "dazi_lee@163.com"
+  username: "dazich@163.com"
   password: ""
-  host: "smtp.qq.com"
+  host: "smtp.163.com"
 
 # 是否开启 pushbear 微信提醒， 使用前需要前往 http://pushbear.ftqq.com 扫码绑定获取 send_key 并关注获得抢票结果通知的公众号
 pushbear_conf:
-  is_pushbear: False
-  send_key: ""
+  is_pushbear: True
+  send_key: "8566-feec4a3645827e1020c933df66ae9937"
 
 # 是否开启cdn查询，可以更快的检测票票 1为开启，2为关闭
 is_cdn: 1
